@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Елизавета Немзер](https://up.htmlacademy.ru/adaptive/26/user/2058175).
-* Наставник: `Arthur Litovko`.
+* Наставник: [Arthur Litovko](https://github.com/baileys-li).
 
 ---
 
