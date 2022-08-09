@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -24,10 +25,10 @@
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Форма отзыва о Седоне.</h1>
-      <section class="banner">
+      <section class="welcome">
         <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
         <img
-          class="banner__inscription"
+          class="welcome__inscription"
           src="img/welcome-inscription-short.svg"
           alt="Надпись: Sedona."
           width="229"
@@ -45,12 +46,12 @@
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
-          <fieldset class="form__field naming">
-            <legend class="naming__title title title--basic">Представьтесь:</legend>
-            <label class="naming__label">
+          <fieldset class="form__field">
+            <legend class="form__title title title--basic">Представьтесь:</legend>
+            <label class="form__label form__label--basic">
               ИМЯ*:
               <input
-                class="naming__input"
+                class="form__input form__input--basic"
                 type="text"
                 name="first-name"
                 id="first-name"
@@ -58,10 +59,10 @@
                 required
               />
             </label>
-            <label class="naming__label">
+            <label class="form__label form__label--basic">
               ФАМИЛИЯ*:
               <input
-                class="naming__input"
+                class="form__input form__input--basic"
                 type="text"
                 name="last-name"
                 id="last-name"
@@ -69,10 +70,10 @@
                 required
               />
             </label>
-            <label class="naming__label">
+            <label class="form__label form__label--basic">
               Отчество:
               <input
-                class="naming__input"
+                class="form__input form__input--basic"
                 type="text"
                 name="patronymic"
                 id="patronymic"
@@ -80,12 +81,12 @@
               />
             </label>
           </fieldset>
-          <fieldset class="form__field contacts">
-            <legend class="contacts__title title title--basic">Контактная информация:</legend>
-            <label class="contacts__label">
+          <fieldset class="form__field">
+            <legend class="form__title title title--basic">Контактная информация:</legend>
+            <label class="form__label form__label--basic">
               Контактный телефон*:
               <input
-                class="contacts__input"
+                class="form__input form__input--basic"
                 type="tel"
                 name="telephone"
                 id="telephone"
@@ -93,10 +94,10 @@
                 required
               />
             </label>
-            <label class="contacts__label">
+            <label class="form__label form__label--basic">
               Электронная почта*:
               <input
-                class="contacts__input"
+                class="form__input form__input--basic"
                 type="email"
                 name="email"
                 id="email"
@@ -105,14 +106,14 @@
               />
             </label>
           </fieldset>
-          <fieldset class="form__field impression">
-            <legend class="impression__title title title--basic">Ваше общее впечатление:</legend>
-            <ul class="impression__list">
-              <li class="impression__item">
-                <label class="impression__label">
+          <fieldset class="form__field">
+            <legend class="form__title title title--basic">Ваше общее впечатление:</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Скорее положительное
                   <input
-                    class="impression__input"
+                    class="form__input"
                     type="radio"
                     name="evaluation"
                     value="positive"
@@ -120,22 +121,22 @@
                   />
                 </label>
               </li>
-              <li class="impression__item">
-                <label class="impression__label">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Скорее отрицательное
                   <input
-                    class="impression__input"
+                    class="form__input"
                     type="radio"
                     name="evaluation"
                     value="negative"
                   />
                 </label>
               </li>
-              <li class="impression__item">
-                <label class="impression__label">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Затрудняюсь ответить
                   <input
-                    class="impression__input"
+                    class="form__input"
                     type="radio"
                     name="evaluation"
                     value="unknown"
@@ -144,49 +145,49 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__field attractions">
-            <legend class="attractions__title title title--basic">
+          <fieldset class="form__field">
+            <legend class="form__title title title--basic">
               Посещенные достопримечательности:
             </legend>
-            <ul class="attractions__list">
-              <li class="attractions__item">
-                <label class="attractions__label">
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Мост Дьявола
                   <input
-                    class="attractions__input"
+                    class="form__input"
                     type="checkbox"
                     name="bridge"
                     checked
                   />
                 </label>
               </li>
-              <li class="attractions__item">
-                <label class="attractions__label">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Гора-Колокол
                   <input
-                    class="attractions__input"
+                    class="form__input"
                     type="checkbox"
                     name="mountain"
                     checked
                   />
                 </label>
               </li>
-              <li class="attractions__item">
-                <label class="attractions__label">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Слайд-парк
                   <input
-                    class="attractions__input"
+                    class="form__input"
                     type="checkbox"
                     name="park"
                     checked
                   />
                 </label>
               </li>
-              <li class="attractions__item">
-                <label class="attractions__label">
+              <li class="form__item">
+                <label class="form__label form__label--additional">
                   Красные скалы
                   <input
-                    class="attractions__input"
+                    class="form__input"
                     type="checkbox"
                     name="rocks"
                   />
@@ -195,17 +196,20 @@
             </ul>
           </fieldset>
           <fieldset class="form__field summary">
-            <label class="summary__title title title--basic" for="emotions"
+            <legend class="form__title title title--basic">
+              Опишите свои эмоции:
+            </legend>
+            <label class="visually-hidden" for="emotions"
               >Опишите свои эмоции:</label
             >
             <textarea
-              class="summary__input summary__input--detailed"
+              class="form__input"
               name="emotions"
               id="emotions"
               placeholder="Опишите подробно все свои восторги"
             ></textarea>
           </fieldset>
-          <button class="form__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
           <span class="form__note">* — обязательные поля</span>
         </form>
       </section>
@@ -283,8 +287,8 @@
       </ul>
       <section class="footer__copyright copyright">
         <h2 class="visually-hidden">Копирайт.</h2>
-        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/study">
+          <span class="copyright__text">Разработано</span>
           <svg
             class="copyright__logo"
             width="27"

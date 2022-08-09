@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -21,7 +22,7 @@
       >
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <nav class="main-navigation">
+      <nav class="main-header__main-navigation main-navigation">
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
             <a
@@ -54,10 +55,10 @@
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Седона.</h1>
-      <section class="banner">
+      <section class="welcome">
         <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
         <img
-          class="banner__inscription"
+          class="welcome__inscription"
           src="img/welcome-inscription.svg"
           alt="Надпись: Welcome to the gorgeous Sedona."
           width="282"
@@ -78,7 +79,6 @@
               <h3 class="advantages__advantages-item-title title title--additional">
                 Настоящий городок
               </h3>
-              <span class="advantages__number">— №1 —</span>
               <p class="advantages__advantages-item-description description description--additional">
                 Седона — не аттракцион для туристов, там течёт своя жизнь
               </p>
@@ -92,7 +92,7 @@
             />
             <ul class="advantages__city-advantages-list">
               <li
-                class="advantages__city-advantages-item advantages__city-advantages-item--secondary"
+                class="advantages__city-advantages-item"
               >
                 <h3 class="advantages__city-advantages-item-title">Жильё</h3>
                 <p class="advantages__city-advantages-item-description">
@@ -100,7 +100,7 @@
                 </p>
               </li>
               <li
-                class="advantages__city-advantages-item advantages__city-advantages-item--secondary"
+                class="advantages__city-advantages-item"
               >
                 <h3 class="advantages__city-advantages-item-title">Еда</h3>
                 <p class="advantages__city-advantages-item-description">
@@ -109,7 +109,7 @@
                 </p>
               </li>
               <li
-                class="advantages__city-advantages-item advantages__city-advantages-item--secondary"
+                class="advantages__city-advantages-item"
               >
                 <h3 class="advantages__city-advantages-item-title">Сувениры</h3>
                 <p class="advantages__city-advantages-item-description">
@@ -127,36 +127,32 @@
               height="260"
             />
             <div class="advantages__card">
-              <h3 class="advantages__advantages-item-title title--additional">
+              <h3 class="advantages__advantages-item-title title title--additional">
                 Там есть мост дьявола
               </h3>
-              <span class="advantages__number">— №2 —</span>
-              <p class="advantages__advantages-item-description description--additional">
+              <p class="advantages__advantages-item-description description description--additional">
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
             </div>
           </li>
 
-          <li class="advantages__item advantages__item--tertiary">
-            <h3 class="advantages__advantages-item-title title--basic">Небольшая площадь</h3>
-            <span class="advantages__number">— №3 —</span>
-            <p class="advantages__advantages-item-description description--basic">
+          <li class="advantages__item advantages__item--secondary">
+            <h3 class="advantages__advantages-item-title title title--basic">Небольшая площадь</h3>
+            <p class="advantages__advantages-item-description description description--basic">
               Все достопримечательности находятся очень близко
             </p>
           </li>
 
-          <li class="advantages__item advantages__item--tertiary">
-            <h3 class="advantages__advantages-item-title title--basic">Красивая дорога</h3>
-            <span class="advantages__number">— №4 —</span>
-            <p class="advantages__advantages-item-description description--basic">
+          <li class="advantages__item advantages__item--secondary">
+            <h3 class="advantages__advantages-item-title title title--basic">Красивая дорога</h3>
+            <p class="advantages__advantages-item-description description description--basic">
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
 
-          <li class="advantages__item advantages__item--tertiary">
-            <h3 class="advantages__advantages-item-title title--basic">Мало туристов</h3>
-            <span class="advantages__number">— №5 —</span>
-            <p class="advantages__advantages-item-description description--basic">
+          <li class="advantages__item advantages__item--secondary">
+            <h3 class="advantages__advantages-item-title title title--basic">Мало туристов</h3>
+            <p class="advantages__advantages-item-description description description--basic">
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
@@ -164,11 +160,11 @@
       </section>
       <section class="search-hotels">
         <h2 class="search-hotels__title">Заинтересовались?</h2>
-        <p class="search-hotels__description">
+        <p class="search-hotels__description description description--basic">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a class="search-hotels__button" href="#">Найти гостиницу</a>
+        <a class="search-hotels__button button" href="#">Найти гостиницу</a>
       </section>
       <!-- <iframe class="map" src="#" width="320" height="360"></iframe> -->
     </main>
@@ -245,8 +241,8 @@
       </ul>
       <section class="footer__copyright copyright">
         <h2 class="visually-hidden">Копирайт.</h2>
-        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/study">
+          <span class="copyright__text">Разработано</span>
           <svg
             class="copyright__logo"
             width="27"
