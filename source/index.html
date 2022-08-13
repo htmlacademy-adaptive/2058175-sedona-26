@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <!-- <a class="main-header__logo" href="#">
         <img
           class="main-header__logo-image"
           src="img/logo.svg"
@@ -15,37 +16,42 @@
           width="185"
           height="96"
         />
-      </a>
+      </a> -->
       <button
-        class="main-header__button main-header__button--open"
+        class="main-navigation__button main-navigation__button--toggle"
         type="button"
       >
-        <span class="visually-hidden">Открыть меню.</span>
+        <span class="visually-hidden">Меню.</span>
       </button>
       <nav class="main-header__main-navigation main-navigation">
         <ul class="main-navigation__list">
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--logo-item">
+            <a class="main-header__logo" href="#">
+              <img
+                class="main-header__logo-image"
+                src="img/logo.svg"
+                alt="Логотип: City of Sedona."
+                width="185"
+                height="96"
+              />
+            </a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--first">
             <a
               class="main-navigation__link main-navigation__link--current"
               href="index.html"
               >Главная</a
             >
-            <button
-              class="main-navigation__button main-navigation__button--close"
-              type="button"
-            >
-              <span class="visually-hidden">Закрыть меню.</span>
-            </button>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--first">
             <a class="main-navigation__link" href="catalog.html"
               >Фото и видео</a
             >
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--second">
             <a class="main-navigation__link" href="form.html">Форма Отзыва</a>
           </li>
-          <li class="main-navigation__item">
+          <li class="main-navigation__item main-navigation__item--second">
             <a class="main-navigation__link" href="https://htmlacademy.ru/study"
               >HTML ACADEMY</a
             >
@@ -75,42 +81,40 @@
 
         <ol class="advantages__list">
           <li class="advantages__item advantages__item--primary">
-            <div class="advantages__card">
-              <h3 class="advantages__advantages-item-title title title--additional">
+            <div class="advantages__card advantages__card--primary">
+              <h3
+                class="advantages__advantages-item-title title title--additional"
+              >
                 Настоящий городок
               </h3>
-              <p class="advantages__advantages-item-description description description--additional">
+              <p
+                class="advantages__advantages-item-description description description--additional"
+              >
                 Седона — не аттракцион для туристов, там течёт своя жизнь
               </p>
             </div>
             <img
-              class="advantages__photo-city"
+              class="advantages__photo advantages__photo--city"
               src="img/photo-city.jpg"
               alt="Вид на городской пейзаж Седоны."
               width="320"
               height="260"
             />
             <ul class="advantages__city-advantages-list">
-              <li
-                class="advantages__city-advantages-item"
-              >
+              <li class="advantages__city-advantages-item">
                 <h3 class="advantages__city-advantages-item-title">Жильё</h3>
                 <p class="advantages__city-advantages-item-description">
                   Рекомендуем пожить в настоящем мотеле, всё как в кино!
                 </p>
               </li>
-              <li
-                class="advantages__city-advantages-item"
-              >
+              <li class="advantages__city-advantages-item">
                 <h3 class="advantages__city-advantages-item-title">Еда</h3>
                 <p class="advantages__city-advantages-item-description">
                   Всегда заказывайте топовый фирменный бургер, вы не
                   разочаруетесь!
                 </p>
               </li>
-              <li
-                class="advantages__city-advantages-item"
-              >
+              <li class="advantages__city-advantages-item">
                 <h3 class="advantages__city-advantages-item-title">Сувениры</h3>
                 <p class="advantages__city-advantages-item-description">
                   Не только китайского, но и настоящего местного производства!
@@ -120,39 +124,55 @@
           </li>
           <li class="advantages__item advantages__item--primary">
             <img
-              class="advantages__photo-bridge"
+              class="advantages__photo advantages__photo--bridge"
               src="img/photo-bridge.jpg"
               alt="Вид на мост дьявола."
               width="320"
               height="260"
             />
-            <div class="advantages__card">
-              <h3 class="advantages__advantages-item-title title title--additional">
+            <div class="advantages__card advantages__card--primary">
+              <h3
+                class="advantages__advantages-item-title title title--additional"
+              >
                 Там есть мост дьявола
               </h3>
-              <p class="advantages__advantages-item-description description description--additional">
+              <p
+                class="advantages__advantages-item-description description description--additional"
+              >
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
             </div>
           </li>
 
           <li class="advantages__item advantages__item--secondary">
-            <h3 class="advantages__advantages-item-title title title--basic">Небольшая площадь</h3>
-            <p class="advantages__advantages-item-description description description--basic">
+            <h3 class="advantages__advantages-item-title title title--basic">
+              Небольшая площадь
+            </h3>
+            <p
+              class="advantages__advantages-item-description description description--basic"
+            >
               Все достопримечательности находятся очень близко
             </p>
           </li>
 
           <li class="advantages__item advantages__item--secondary">
-            <h3 class="advantages__advantages-item-title title title--basic">Красивая дорога</h3>
-            <p class="advantages__advantages-item-description description description--basic">
+            <h3 class="advantages__advantages-item-title title title--basic">
+              Красивая дорога
+            </h3>
+            <p
+              class="advantages__advantages-item-description description description--basic"
+            >
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
 
           <li class="advantages__item advantages__item--secondary">
-            <h3 class="advantages__advantages-item-title title title--basic">Мало туристов</h3>
-            <p class="advantages__advantages-item-description description description--basic">
+            <h3 class="advantages__advantages-item-title title title--basic">
+              Мало туристов
+            </h3>
+            <p
+              class="advantages__advantages-item-description description description--basic"
+            >
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>

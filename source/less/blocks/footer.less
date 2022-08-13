@@ -1,3 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+@media (min-width: @desktop-width) {
+  padding-left: 104px;
+  padding-right: 104px;
+  max-width: @desktop-width;
+}
+}
+
 .footer__hashtag {
   display: block;
   font-weight: 700;
@@ -9,10 +28,21 @@
 }
 
 .footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 156px;
   list-style-type: none;
   padding: 0;
+  margin: 0 auto;
 }
 
 .footer__social-item {
-  background-color: #81B3D2;
+  background-color: @primary-color;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__social-icon svg {
+  padding: 12px 12px;
 }
