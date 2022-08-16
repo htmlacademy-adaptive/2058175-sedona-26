@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
+    <div class="page__wrapper">
     <header class="main-header">
-      <!-- <a class="main-header__logo" href="#">
+      <a class="main-header__logo" href="#">
         <img
           class="main-header__logo-image"
           src="img/logo.svg"
@@ -16,42 +17,31 @@
           width="185"
           height="96"
         />
-      </a> -->
+      </a>
       <button
-        class="main-navigation__button main-navigation__button--toggle"
+        class="main-header__button"
         type="button"
       >
         <span class="visually-hidden">Меню.</span>
       </button>
       <nav class="main-header__main-navigation main-navigation">
         <ul class="main-navigation__list">
-          <li class="main-navigation__item main-navigation__item--logo-item">
-            <a class="main-header__logo" href="#">
-              <img
-                class="main-header__logo-image"
-                src="img/logo.svg"
-                alt="Логотип: City of Sedona."
-                width="185"
-                height="96"
-              />
-            </a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--first">
+          <li class="main-navigation__item main-navigation__item">
             <a
               class="main-navigation__link main-navigation__link--current"
               href="index.html"
               >Главная</a
             >
           </li>
-          <li class="main-navigation__item main-navigation__item--first">
+          <li class="main-navigation__item main-navigation__item">
             <a class="main-navigation__link" href="catalog.html"
               >Фото и видео</a
             >
           </li>
-          <li class="main-navigation__item main-navigation__item--second">
+          <li class="main-navigation__item main-navigation__item">
             <a class="main-navigation__link" href="form.html">Форма Отзыва</a>
           </li>
-          <li class="main-navigation__item main-navigation__item--second">
+          <li class="main-navigation__item main-navigation__item">
             <a class="main-navigation__link" href="https://htmlacademy.ru/study"
               >HTML ACADEMY</a
             >
@@ -88,9 +78,9 @@
                 Представьтесь:
               </legend>
               <label class="form__label">
-                ИМЯ*:
+                <span class="form__label-detailed">ИМЯ*:</span>
                 <input
-                  class="form__input form__input"
+                  class="form__input"
                   type="text"
                   name="first-name"
                   id="first-name"
@@ -99,9 +89,10 @@
                 />
               </label>
               <label class="form__label">
-                ФАМИЛИЯ*:
+                <span class="form__label-detailed">ФАМИЛИЯ*:</span>
+
                 <input
-                  class="form__input form__input"
+                  class="form__input"
                   type="text"
                   name="last-name"
                   id="last-name"
@@ -110,9 +101,10 @@
                 />
               </label>
               <label class="form__label">
-                Отчество:
+                <span class="form__label-detailed">Отчество:</span>
+
                 <input
-                  class="form__input form__input"
+                  class="form__input"
                   type="text"
                   name="patronymic"
                   id="patronymic"
@@ -125,9 +117,10 @@
                 Контактная информация:
               </legend>
               <label class="form__label">
-                Контактный телефон*:
+                <span class="form__label-detailed">Контактный телефон*:</span>
+
                 <input
-                  class="form__input form__input"
+                  class="form__input"
                   type="tel"
                   name="telephone"
                   id="telephone"
@@ -136,9 +129,10 @@
                 />
               </label>
               <label class="form__label">
-                Электронная почта*:
+                <span class="form__label-detailed">Электронная почта*:</span>
+
                 <input
-                  class="form__input form__input"
+                  class="form__input"
                   type="email"
                   name="email"
                   id="email"
@@ -256,10 +250,12 @@
               placeholder="Опишите подробно все свои восторги"
             ></textarea>
           </fieldset>
+          <div class="form__wrapper-button">
           <button class="form__button button" type="submit">
             ОТПРАВИТЬ ОТЗЫВ
           </button>
           <span class="form__note">* — обязательные поля</span>
+        </div>
         </form>
       </section>
     </main>
@@ -354,5 +350,6 @@
         </a>
       </section>
     </footer>
+    </div>
   </body>
 </html>

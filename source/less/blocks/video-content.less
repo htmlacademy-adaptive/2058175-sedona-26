@@ -1,8 +1,37 @@
 .video-content {
-  min-width: 320px;
+  min-width: 280px;
+  width: 87%;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    width: 84%;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    width: 66%;
+  }
+}
+
+.video-content__title {
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding: 0 5%;
+}
+
+.video-content__description {
+  margin-top: 0;
+  margin-bottom: 38px;
+  padding: 0 5%;
 }
 
 .video-content__video {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 500px;
+  }
 }
