@@ -19,6 +19,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
+  counter-reset: advantage 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -118,6 +119,27 @@
 .advantages__advantages-item-title {
   margin-top: 0;
   margin-bottom: 54px;
+  counter-increment: advantage__item 1;
+}
+
+.advantages__advantages-item-title::after {
+  position: absolute;
+  content: "- №" counter(advantage) " -";
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  counter-increment: advantage;
+  margin-top: 15px;
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 25%;
+    left: auto;
+    right: auto;
+  }
 }
 
 .advantages__advantages-item-description {

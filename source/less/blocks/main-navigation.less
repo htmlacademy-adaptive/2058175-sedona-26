@@ -1,8 +1,13 @@
 .main-navigation {
+  position: relative;
   @media (min-width: @tablet-width) {
     width: 88%;
     margin: 0 auto;
   }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
 }
 
 .main-navigation__list {
@@ -15,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: -98px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,9 +28,18 @@
   }
 }
 
+.main-navigation--nojs .main-navigation__list {
+  position: static;
+  min-height: 0;
+}
+
+.main-navigation--opened .main-navigation__list {
+  margin-top: -98px;
+}
+
 .main-navigation__item {
   background-color: @primary-color;
-  padding: 16px 0;
+  padding: 17px 0 12px 0;
 
   @media (min-width: @tablet-width) {
     background-color: @basic-color;
@@ -38,20 +53,82 @@
   }
 }
 
+.main-navigation--closed .main-navigation__item {
+  display: none;
+}
+
 .main-navigation__link {
   display: block;
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
-  color: #ffffff;
+  color: @basic-color;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    color: #000000;
+    color: @contrasting-color;
     font-size: 14px;
+  }
+}
+
+.main-navigation__toggle {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 51px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle {
+  top: auto;
+  bottom: 45px;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  top: 0;
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: @primary-color;
+  box-shadow: 0 5px 0 0 @primary-color, 0 10px 0 0 @primary-color;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    width: 23px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
