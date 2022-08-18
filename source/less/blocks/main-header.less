@@ -3,7 +3,13 @@
 }
 
 .main-header__logo-image {
+  position: relative;
+  z-index: 2;
   display: block;
   height: 96px;
   margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    z-index: 0;
+  }
 }

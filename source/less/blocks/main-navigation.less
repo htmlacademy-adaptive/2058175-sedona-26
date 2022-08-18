@@ -10,6 +10,11 @@
   display: none;
 }
 
+.main-navigation--nojs .main-navigation__list {
+  position: static;
+  min-height: 0;
+}
+
 .main-navigation__list {
   list-style-type: none;
   margin: 0;
@@ -28,10 +33,10 @@
   }
 }
 
-.main-navigation--nojs .main-navigation__list {
-  position: static;
-  min-height: 0;
-}
+// .main-navigation--nojs .main-navigation__list {
+//   position: static;
+//   min-height: 0;
+// }
 
 .main-navigation--opened .main-navigation__list {
   margin-top: -98px;
