@@ -1,0 +1,67 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  // Временно спрятан
+  display: none;
+}
+
+.modal__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 320px;
+  height: fit-content;
+  background-color: @basic-color;
+  margin: auto;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
+}
+
+.modal__item--error {
+  padding: 45px 42px 35px 42px;
+}
+
+.modal__item--success {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+}
+
+.modal__wrapper-text {
+  padding: 39px;
+    padding-bottom: 0;
+}
+
+.modal__title {
+  margin: 0;
+}
+
+.modal__title--success {
+  margin-bottom: 30px;
+}
+
+.modal__description {
+  margin: 0;
+}
+
+.modal__wrapper-button {
+  background-color: #F2F2F2;
+  padding: 20px;
+}
+
+.modal__button {
+  display: block;
+  margin: 0 auto;
+  padding: 18px 64px;
+  padding-bottom: 14px;
+}

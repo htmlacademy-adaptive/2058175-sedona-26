@@ -9,7 +9,7 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="main-header">
-        <a class="main-header__logo" href="#">
+        <a class="main-header__logo main-header__logo" href="#">
           <img
             class="main-header__logo-image"
             src="img/logo.svg"
@@ -18,10 +18,12 @@
             height="96"
           />
         </a>
-        <button class="main-header__button" type="button">
-          <span class="visually-hidden">Меню.</span>
-        </button>
-        <nav class="main-header__main-navigation main-navigation">
+        <nav
+          class="main-header__main-navigation main-navigation main-navigation--opened main-navigation--nojs"
+        >
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
           <ul class="main-navigation__list">
             <li class="main-navigation__item main-navigation__item">
               <a
@@ -268,5 +270,6 @@
         </section>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
