@@ -6,7 +6,12 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="img/favicons/icon.svg"
+      type="image/svg+xml"
+      sizes="32x32"
+    />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
   </head>
@@ -56,7 +61,7 @@
       </header>
       <main class="main-container">
         <h1 class="visually-hidden">Седона.</h1>
-        <section class="welcome">
+        <section class="welcome welcome--optional">
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
           <img
             class="welcome__inscription"
@@ -89,15 +94,29 @@
                 </p>
               </div>
               <picture>
-              <img
-                class="advantages__photo advantages__photo--city"
-                src="img/advantages/photo-city-advantage.jpg"
-                srcset="img/advantages/photo-city-advantage@2x.jpg"
-                alt="Вид на городской пейзаж Седоны."
-                width="320"
-                height="260"
-              />
-            </picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/advantages/photo-city-advantage-desk.jpg    1x,
+                    img/advantages/photo-city-advantage-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/advantages/photo-city-advantage-tab.jpg    1x,
+                    img/advantages/photo-city-advantage-tab@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="advantages__photo advantages__photo--city"
+                  src="img/advantages/photo-city-advantage.jpg"
+                  srcset="img/advantages/photo-city-advantage@2x.jpg 2x"
+                  alt="Вид на городской пейзаж Седоны."
+                  width="320"
+                  height="260"
+                />
+              </picture>
               <ul class="advantages__city-advantages-list">
                 <li class="advantages__city-advantages-item">
                   <h3 class="advantages__city-advantages-item-title">Жильё</h3>
@@ -123,13 +142,30 @@
               </ul>
             </li>
             <li class="advantages__item advantages__item--primary">
-              <img
-                class="advantages__photo advantages__photo--bridge"
-                src="img/photo-bridge.jpg"
-                alt="Вид на мост дьявола."
-                width="320"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/advantages/photo-bridge-advantage-desk.jpg    1x,
+                    img/advantages/photo-bridge-advantage-desk@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/advantages/photo-bridge-advantage-tab.jpg    1x,
+                    img/advantages/photo-bridge-advantage-tab@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="advantages__photo advantages__photo--bridge"
+                  src="img/advantages/photo-bridge-advantage.jpg"
+                  srcset="img/advantages/photo-bridge-advantage@2x.jpg 2x"
+                  alt="Вид на мост дьявола."
+                  width="320"
+                  height="260"
+                />
+              </picture>
               <div class="advantages__card advantages__card--primary">
                 <h3
                   class="advantages__advantages-item-title title title--additional"

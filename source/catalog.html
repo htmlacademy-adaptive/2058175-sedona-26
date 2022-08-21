@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="img/favicons/icon.svg"
+      type="image/svg+xml"
+      sizes="32x32"
+    />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
   </head>
@@ -59,11 +64,11 @@
         <h1 class="visually-hidden">
           Фото и видео достопримечательностей Седоны.
         </h1>
-        <section class="welcome">
+        <section class="welcome welcome--optional">
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
           <img
-            class="welcome__inscription"
-            src="img/welcome-inscription-short.svg"
+            class="welcome__inscription welcome__inscription--optional"
+            src="img/welcome/welcome-inscription-short.svg"
             alt="Надпись: Sedona."
             width="229"
             height="39"
@@ -79,13 +84,23 @@
         <section class="gallery">
           <ul class="gallery__list">
             <li class="gallery__item">
-              <img
-                class="gallery__photo"
-                src="img/photo-open-space.jpg"
-                alt="Фото дороги."
-                width="280"
-                height="280"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog/photo-open-space-desk.jpg    1x,
+                    img/catalog/photo-open-space-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery__photo"
+                  src="img/catalog/photo-open-space.jpg"
+                  srcset="img/catalog/photo-open-space@2x.jpg 2x"
+                  alt="Фото дороги."
+                  width="280"
+                  height="280"
+                />
+              </picture>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Неродные просторы</h3>
@@ -100,13 +115,23 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img
-                class="gallery__photo"
-                src="img/photo-greenery.jpg"
-                alt="Фото растения."
-                width="280"
-                height="280"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog/photo-greenery-desk.jpg    1x,
+                    img/catalog/photo-greenery-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery__photo"
+                  src="img/catalog/photo-greenery.jpg"
+                  srcset="img/catalog/photo-greenery@2x.jpg"
+                  alt="Фото растения."
+                  width="280"
+                  height="280"
+                />
+              </picture>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Местная растительность</h3>
@@ -121,13 +146,23 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img
-                class="gallery__photo"
-                src="img/photo-road.jpg"
-                alt="Вид на дорогу сверху."
-                width="280"
-                height="280"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog/photo-road-desk.jpg    1x,
+                    img/catalog/photo-road-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery__photo"
+                  src="img/catalog/photo-road.jpg"
+                  srcset="img/catalog/photo-road@2x.jpg"
+                  alt="Вид на дорогу сверху."
+                  width="280"
+                  height="280"
+                />
+              </picture>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Дорога на север</h3>
@@ -142,13 +177,23 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img
-                class="gallery__photo"
-                src="img/photo-bridge.jpg"
-                alt="Вид на мост дьявола."
-                width="280"
-                height="280"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog/photo-bridge-desk.jpg    1x,
+                    img/catalog/photo-bridge-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery__photo"
+                  src="img/catalog/photo-bridge.jpg"
+                  srcset="img/catalog/photo-bridge@2x.jpg"
+                  alt="Вид на мост дьявола."
+                  width="280"
+                  height="280"
+                />
+              </picture>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Мост дьявола</h3>
@@ -172,15 +217,42 @@
             Смотрите видеопрезентацию и скорее за билетами, пока они не
             подорожали в очередной раз!
           </p>
-          <video
-            class="video-content__video"
-            width="280"
-            height="177"
-            controls="controls"
-            poster="img/video-poster.jpg"
-          >
-            <source src="#" type="video/mp4" />
-          </video>
+          <div class="video-content__video-wrapper">
+            <a class="video-content__link" href="#">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/video/video-desk.jpg    1x,
+                    img/video/video-desk@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="video-content__poster"
+                  src="img/video/video.jpg"
+                  srcset="img/video/video@2x.jpg"
+                  alt="Про Седону."
+                  width="280"
+                  height="177"
+                />
+              </picture>
+            </a>
+            <button class="video-content__button" type="button">
+              <svg class="video-content__icon"
+                width="48"
+                height="54"
+                viewBox="0 0 48 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Воспроизвести видео."
+              >
+                <path
+                  d="M48 27L0 54L2.42273e-06 0L48 27Z"
+                />
+              </svg>
+            </button>
+          </div>
         </section>
       </main>
       <footer class="footer">

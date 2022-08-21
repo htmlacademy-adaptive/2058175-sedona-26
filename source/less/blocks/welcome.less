@@ -1,6 +1,6 @@
 .welcome {
   display: flex;
-  background-image: url("../img/background-welcome.jpg");
+  background-image: url("../img/welcome/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: @primary-color;
@@ -9,8 +9,17 @@
   margin-top: -38px;
   min-width: 320px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/welcome/back@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 0;
+    background-image: url("../img/welcome/back-desk.jpg");
+  }
+
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    background-image: url("../img/welcome/back-desk@2x.jpg");
   }
 
   @media (min-width: @desktop-width) {
@@ -18,9 +27,17 @@
   }
 }
 
+.welcome--optional {
+  height: 290px;
+}
+
 .welcome__inscription {
   margin-top: 90px;
   margin-bottom: 85px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.welcome__inscription--optional {
+  margin: auto;
 }
