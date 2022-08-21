@@ -17,6 +17,7 @@
 }
 
 .form__field {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -31,12 +32,68 @@
   }
 }
 
+.form__field::before {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 1px;
+  background-color: #e5e5e5;
+  left: -10%;
+  top: -50%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #dbdbdb 19%,
+      transparent 19%,
+      transparent 82%,
+      #dbdbdb 82%,
+      #dbdbdb 100%
+    );
+    left: 0;
+    top: -35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(
+      to right,
+      #dbdbdb 29%,
+      transparent 29%,
+      transparent 71%,
+      #dbdbdb 71%,
+      #dbdbdb 100%
+    );
+  }
+}
+
+.form__field--name::before {
+  top: -75px;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.form__field--contacts::before {
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.form__field--attractions::before {
+  @media (min-width: @tablet-width) {
+    top: -45px;
+  }
+}
+
 .form__title {
   margin-bottom: 20px;
 }
 
 .form__wrapper {
   @media (min-width: @tablet-width) {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
@@ -47,7 +104,19 @@
   }
 }
 
+.form__wrapper::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 338px;
+    background-color: #dbdbdb;
+    left: 50%;
+  }
+}
+
 .form__label {
+  position: relative;
   display: flex;
   flex-direction: column;
   font-family: inherit;
@@ -56,6 +125,25 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.form__label--pic::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateX(-50%);
+  left: 90%;
+  background-repeat: no-repeat;
+}
+
+.form__label--telephone::after {
+  background-image: url("../img/phone.svg");
+}
+
+.form__label--email::after {
+  background-image: url("../img/mail.svg");
 }
 
 .form__label-detailed {
@@ -82,7 +170,16 @@
 }
 
 .form__input--detailed {
-  height: 150px;
+  padding: 16px;
+  padding-bottom: 82px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 118px;
+  }
+}
+
+.form__input--colored {
+  background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
 }
 
 .form__list {

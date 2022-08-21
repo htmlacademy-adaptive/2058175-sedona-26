@@ -87,6 +87,7 @@
 }
 
 .advantages__city-advantages-item {
+  position: relative;
   background-color: @basic-color;
   padding: 25px;
   box-sizing: border-box;
@@ -100,6 +101,39 @@
   }
 }
 
+.advantages__city-advantages-item::before {
+  position: absolute;
+  content: "";
+  left: -20px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+
+  @media (min-width: @tablet-width) {
+    left: 50%;
+    top: 26px;
+    width: 75px;
+    height: 72px;
+    background-size: 75px 72px;
+    transform: translateX(-50%);
+}
+}
+
+.advantages__city-advantages-item:first-child::before {
+  background-image: url("../img/advantages/house.svg");
+}
+
+.advantages__city-advantages-item:nth-child(2)::before {
+  background-image: url("../img/advantages/burger.svg");
+}
+
+.advantages__city-advantages-item:last-child::before {
+  background-image: url("../img/advantages/gift.svg");
+}
+
+
 .advantages__city-advantages-item:last-child {
   margin-bottom: 0;
 }
@@ -111,7 +145,6 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    // width: 66%;
     flex-grow: 1;
   }
 }
