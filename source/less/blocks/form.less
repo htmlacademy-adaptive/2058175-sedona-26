@@ -155,6 +155,8 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: capitalize;
+  padding-left: 62px;
+  padding-top: 11px;
 }
 
 .form__input {
@@ -205,6 +207,7 @@
 
 .form__control {
   display: flex;
+  position: relative;
 }
 
 .form__wrapper-button {
@@ -239,4 +242,31 @@
     margin: 0;
     padding: 25px 0 25px 132px;
   }
+}
+
+.form__control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.form__input[type="radio"]:checked + .form__control-mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @contrasting-color;
+  border: 15px solid #f2f2f2;
+}
+
+.form__control-mark--checkbox {
+  border-radius: 4%;
+}
+
+.form__input[type="checkbox"]:checked + .form__control-mark--checkbox {
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
