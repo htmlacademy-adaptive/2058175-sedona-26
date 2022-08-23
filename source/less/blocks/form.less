@@ -173,6 +173,15 @@
   box-sizing: border-box;
 }
 
+.form__input:hover {
+  background: #e5e5e5;
+}
+
+.form__input:active {
+  background: @basic-color;
+  outline: 4px solid #e5e5e5;
+}
+
 .form__input--detailed {
   padding: 16px;
   padding-bottom: 82px;
@@ -184,6 +193,10 @@
 
 .form__input--colored {
   background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
+}
+
+.form__input--colored:active {
+  background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
 }
 
 .form__list {
@@ -271,4 +284,25 @@
   background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form__control:hover .form__control-mark {
+  background-color: #e5e5e5;
+}
+
+.form__control:hover .form__input[type="radio"]:checked + .form__control-mark {
+  border: 15px solid #e5e5e5;
+}
+
+.form__control:active .form__control-mark {
+  background-color: #d5d5d5;
+}
+
+.form__control:active .form__input[type="radio"]:checked + .form__control-mark {
+  background-color: rgba(51, 51, 51, 0.3);
+  border: 15px solid #d5d5d5;
+}
+
+.form__control:active .form__input[type="checkbox"]:checked + .form__control-mark {
+  background-image: url("../img/checked-opacity.svg");
 }

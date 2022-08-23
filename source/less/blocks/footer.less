@@ -34,6 +34,14 @@
   }
 }
 
+.footer__hashtag:hover {
+  color: @primary-color;
+}
+
+.footer__hashtag:active {
+  color: #b3b3b3;
+}
+
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
@@ -49,12 +57,27 @@
   }
 }
 
-.footer__social-item {
+
+.footer__social-icon {
+  display: block;
   background-color: @primary-color;
   width: 48px;
   height: 48px;
 }
 
+.footer__social-icon:hover {
+  background-color: #669ec0;
+}
+
+.footer__social-icon:active {
+  background-color: #5496bd;
+}
+
+.footer__social-icon:active svg {
+  fill-opacity: 0.3;
+}
+
 .footer__social-icon svg {
+  fill: @basic-color;
   padding: 12px 12px;
 }
