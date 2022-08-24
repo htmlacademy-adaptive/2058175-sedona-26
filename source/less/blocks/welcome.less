@@ -1,16 +1,36 @@
 .welcome {
   display: flex;
-  background-image: url("../img/background-welcome.jpg");
+  background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #81b3d2;
+  background-size: auto, cover;
+  background-color: @primary-color;
+  background-position: bottom center, center;
   height: 389px;
   margin: 0 auto;
+  margin-top: -38px;
   min-width: 320px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back-desk.jpg");
+    background-size: 100%, cover;
+  }
+
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back-desk@2x.jpg");
+  }
 
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
   }
+}
+
+.welcome--optional {
+  height: 290px;
 }
 
 .welcome__inscription {
@@ -18,4 +38,8 @@
   margin-bottom: 85px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.welcome__inscription--optional {
+  margin: auto;
 }

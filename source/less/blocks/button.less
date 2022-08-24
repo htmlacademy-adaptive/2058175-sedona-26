@@ -4,10 +4,24 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: #ffffff;
+  color: @basic-color;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #81b3d2;
+  background-color: @primary-color;
   border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #669ec0;
+}
+
+.button:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
 }
