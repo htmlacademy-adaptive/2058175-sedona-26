@@ -1,4 +1,9 @@
+.page {
+  height: 100%;
+}
+
 .page__body {
+  display: flex;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -6,12 +11,17 @@
   line-height: 21px;
   background-color: #e7e5e5;
   width: 100%;
+  min-height: 100%;
   margin: 0;
 }
 
 .page__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100%;
   max-width: 1200px;
   min-width: 320px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: @basic-color;
 }
