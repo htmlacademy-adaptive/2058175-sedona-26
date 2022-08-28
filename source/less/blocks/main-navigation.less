@@ -1,8 +1,9 @@
 .main-navigation {
   position: relative;
+
   @media (min-width: @tablet-width) {
-    width: 88%;
     margin: 0 auto;
+    background-color: @basic-color;
   }
 }
 
@@ -59,12 +60,13 @@
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
+  line-height: 26px;
   color: @basic-color;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   background-color: @primary-color;
-  padding: 17px 20px 12px 20px;
+  padding: 18px 20px 12px 20px;
 
   @media (min-width: @tablet-width) {
     color: @contrasting-color;
@@ -128,12 +130,12 @@
 .main-navigation--closed .main-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  left: 20px;
-  width: 23px;
+  top: 16px;
+  left: 26px;
+  width: 24px;
   height: 4px;
   background-color: @primary-color;
-  box-shadow: 0 5px 0 0 @primary-color, 0 10px 0 0 @primary-color;
+  box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -141,11 +143,11 @@
   &::after {
     content: "";
     position: absolute;
-    top: 22px;
-    left: 20px;
-    width: 23px;
+    top: 29px;
+    left: 25px;
+    width: 28px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: @basic-color;
   }
 
   &::before {

@@ -1,8 +1,13 @@
 .map {
-  margin-bottom: 38px;
+  margin-bottom: 33px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 38px;
+  }
 }
 
 .map__map-pic {
   width: 100%;
+  height: 350px;
   object-fit: cover;
 }
