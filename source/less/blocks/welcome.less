@@ -1,6 +1,7 @@
 .welcome {
   display: flex;
-  background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back.jpg");
+  background-image: url("../img/welcome/intro-triangle.svg"),
+    url("../img/welcome/back.jpg");
   background-repeat: no-repeat;
   background-size: auto, cover;
   background-color: @primary-color;
@@ -11,22 +12,36 @@
   min-width: 320px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back@2x.jpg");
+    background-image: url("../img/welcome/intro-triangle.svg"),
+      url("../img/welcome/back@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
-    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back-desk.jpg");
+    background-image: url("../img/welcome/intro-triangle.svg"),
+      url("../img/welcome/back-desk.jpg");
     background-size: 100%, cover;
+    height: 518px;
   }
 
   @media (min-width: 768px) and (min-resolution: 2dppx) {
-    background-image: url("../img/welcome/intro-triangle.svg"), url("../img/welcome/back-desk@2x.jpg");
+    background-image: url("../img/welcome/intro-triangle.svg"),
+      url("../img/welcome/back-desk@2x.jpg");
   }
 
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
   }
+}
+
+.welcome--opened {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -164px;
+  }
+}
+
+.welcome--closed {
+  margin-top: -38px;
 }
 
 .welcome--optional {
@@ -38,6 +53,16 @@
   margin-bottom: 85px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: auto;
+    margin-top: 82px;
+  }
+}
+
+.welcome__inscription--optional {
+  margin: auto;
 }
 
 .welcome__inscription--optional {
