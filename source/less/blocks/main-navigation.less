@@ -79,7 +79,7 @@
 .main-navigation__link--current {
   @media (min-width: @tablet-width) {
     color: #766357;
-}
+  }
 }
 
 .main-navigation__link:hover {
@@ -125,20 +125,7 @@
 
 .main-navigation--opened .main-navigation__toggle {
   top: 0;
-}
 
-.main-navigation--closed .main-navigation__toggle::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 26px;
-  width: 24px;
-  height: 4px;
-  background-color: @primary-color;
-  box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
-}
-
-.main-navigation--opened .main-navigation__toggle {
   &::before,
   &::after {
     content: "";
@@ -160,11 +147,24 @@
   }
 }
 
-.main-navigation--opened .main-navigation__toggle:hover::before, .main-navigation__toggle:hover::after {
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  width: 24px;
+  height: 4px;
+  background-color: @primary-color;
+  box-shadow: 0 9px 0 0 @primary-color, 0 18px 0 0 @primary-color;
+}
+
+.main-navigation--opened .main-navigation__toggle:hover::before,
+.main-navigation__toggle:hover::after {
   background-color: rgba(@basic-color, 0.6);
 }
 
-.main-navigation--opened .main-navigation__toggle:active::before, .main-navigation__toggle:active::after {
+.main-navigation--opened .main-navigation__toggle:active::before,
+.main-navigation__toggle:active::after {
   background-color: rgba(@basic-color, 0.3);
 }
 

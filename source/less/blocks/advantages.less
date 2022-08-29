@@ -92,6 +92,7 @@
 .advantages__wrapper {
   display: flex;
   flex-direction: column-reverse;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -118,6 +119,7 @@
   height: 37px;
   top: -21px;
   background-size: cover;
+
   @media (min-width: @tablet-width) {
     content: none;
   }
@@ -221,6 +223,7 @@
 .advantages__city-advantages-item:first-child::before {
   background-image: url("../img/advantages/house.svg");
   top: 23px;
+
   @media (min-width: @tablet-width) {
     top: 58px;
   }
@@ -282,16 +285,19 @@
       padding: 0 83px;
     }
   }
+
   &--third {
     @media (max-width: @mobile-width-only) {
       margin-top: 18px;
     }
   }
+
   &--fourth {
     @media (max-width: @mobile-width-only) {
       margin-top: -2px;
     }
   }
+
   &--fifth {
     @media (max-width: @mobile-width-only) {
       margin-top: 2px;
@@ -332,10 +338,12 @@
     margin-top: 22px;
     margin-bottom: 15px;
   }
+
   &--food {
     margin-top: 11px;
     margin-bottom: 16px;
   }
+
   &--gift {
     margin-top: 9px;
     margin-bottom: 15px;
