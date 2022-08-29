@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="img/favicons/icon.svg"
+      type="image/svg+xml"
+      sizes="32x32"
+    />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
   </head>
@@ -31,11 +36,7 @@
           </button>
           <ul class="main-navigation__list">
             <li class="main-navigation__item main-navigation__item">
-              <a
-                class="main-navigation__link"
-                href="index.html"
-                >Главная</a
-              >
+              <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item main-navigation__item">
               <a class="main-navigation__link" href="catalog.html"
@@ -43,7 +44,11 @@
               >
             </li>
             <li class="main-navigation__item main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--current" href="form.html">Форма Отзыва</a>
+              <a
+                class="main-navigation__link main-navigation__link--current"
+                href="form.html"
+                >Форма Отзыва</a
+              >
             </li>
             <li class="main-navigation__item main-navigation__item">
               <a
@@ -122,7 +127,9 @@
                 <legend class="form__title title title--basic">
                   Контактная информация:
                 </legend>
-                <label class="form__label form__label--pic form__label--telephone">
+                <label
+                  class="form__label form__label--pic form__label--telephone"
+                >
                   <span class="form__label-detailed">Контактный телефон*:</span>
 
                   <input
@@ -200,7 +207,7 @@
             </fieldset>
             <fieldset class="form__field form__field--attractions">
               <legend class="form__title title title--basic">
-                Посещенные<br>достопримечательности:
+                Посещенные<br />достопримечательности:
               </legend>
               <ul class="form__list">
                 <li class="form__item">
@@ -211,7 +218,9 @@
                       name="bridge"
                       checked
                     />
-                    <span class="form__control-mark form__control-mark--checkbox"></span>
+                    <span
+                      class="form__control-mark form__control-mark--checkbox"
+                    ></span>
                     <span class="form__label form__label--control"
                       >Мост Дьявола</span
                     >
@@ -225,7 +234,9 @@
                       name="mountain"
                       checked
                     />
-                    <span class="form__control-mark form__control-mark--checkbox"></span>
+                    <span
+                      class="form__control-mark form__control-mark--checkbox"
+                    ></span>
                     <span class="form__label form__label--control"
                       >Гора-Колокол</span
                     >
@@ -239,7 +250,9 @@
                       name="park"
                       checked
                     />
-                    <span class="form__control-mark form__control-mark--checkbox"></span>
+                    <span
+                      class="form__control-mark form__control-mark--checkbox"
+                    ></span>
                     <span class="form__label form__label--control"
                       >Слайд-парк</span
                     >
@@ -247,8 +260,14 @@
                 </li>
                 <li class="form__item">
                   <label class="form__control">
-                    <input class="form__input visually-hidden" type="checkbox" name="rocks" />
-                    <span class="form__control-mark form__control-mark--checkbox"></span>
+                    <input
+                      class="form__input visually-hidden"
+                      type="checkbox"
+                      name="rocks"
+                    />
+                    <span
+                      class="form__control-mark form__control-mark--checkbox"
+                    ></span>
                     <span class="form__label form__label--control"
                       >Красные скалы</span
                     >
@@ -318,17 +337,17 @@
               class="footer__social-icon"
               href="https://www.youtube.com/user/htmlacademyru"
             >
-            <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Ютуб."
-          >
-            <use href="./img/sprite.svg#youtube"></use>
-          </svg>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Ютуб."
+              >
+                <use href="./img/sprite.svg#youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -351,8 +370,8 @@
           </a>
         </section>
       </footer>
-      <div class="modal">
-        <div class="modal__item modal__item--error">
+      <div class="visually-hidden modal">
+        <div class="visually-hidden modal__item modal__item--error">
           <h2 class="modal__title title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
           <p class="modal__description description">
             Проверьте поля, выделенные красным, скорее всего вы забыли их
@@ -360,19 +379,26 @@
           </p>
           <button class="modal__button button" type="button">OK</button>
         </div>
-        <div class="modal__item modal__item--success">
+        <div class="visually-hidden modal__item modal__item--success">
           <div class="modal__wrapper-text">
-          <h2 class="modal__title modal__title--success title">Ваш отзыв отправлен!</h2>
-          <p class="modal__description modal__description--success description">
-            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
-            время мы опубликуем его на сайте.
-          </p>
-        </div>
+            <h2 class="modal__title modal__title--success title">
+              Ваш отзыв отправлен!
+            </h2>
+            <p
+              class="modal__description modal__description--success description"
+            >
+              Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
+              время мы опубликуем его на сайте.
+            </p>
+          </div>
           <div class="modal__wrapper-button">
-          <button class="modal__button modal__button--success button" type="button">
-            ЗАкРЫТЬ ОКНО
-          </button>
-        </div>
+            <button
+              class="modal__button modal__button--success button"
+              type="button"
+            >
+              ЗАкРЫТЬ ОКНО
+            </button>
+          </div>
         </div>
       </div>
     </div>
