@@ -96,17 +96,17 @@
   }
 }
 
-.gallery__wrapper-likes {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+// .gallery__wrapper-likes {
+//   display: flex;
+//   gap: 5px;
+//   align-items: center;
 
-  @media (min-width: @tablet-width) {
-    width: 50%;
-    justify-content: end;
-    margin-bottom: 27px;
-  }
-}
+//   @media (min-width: @tablet-width) {
+//     width: 50%;
+//     justify-content: end;
+//     margin-bottom: 27px;
+//   }
+// }
 
 .gallery__photo {
   grid-column: 1/-1;
@@ -138,13 +138,21 @@
   }
 }
 
-.gallery__likes {
-  font-weight: 700;
-}
-
 .gallery__button-like {
+  display: flex;
+  gap: 5px;
+  align-items: end;
+  padding: 0;
   background-color: transparent;
   border: none;
+}
+
+.gallery__likes {
+  font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-color;
+  }
 }
 
 .gallery__button-like-icon {
