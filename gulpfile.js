@@ -133,8 +133,12 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/script.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
+  gulp.watch(("source/img/**/*.svg", "!source/img/icons/*.svg"), gulp.parallel(svg, reload));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.series(optimizeImages, reload));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.parallel(createWebp, reload));
 };
 
 // Build
