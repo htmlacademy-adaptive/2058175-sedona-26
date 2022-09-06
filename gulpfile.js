@@ -38,7 +38,10 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js"));
+  return gulp
+  .src("source/js/*.js")
+  .pipe(terser())
+  .pipe(gulp.dest("build/js"));
 };
 
 // Images
@@ -133,7 +136,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts, reload));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
   gulp.watch(("source/img/**/*.svg", "!source/img/icons/*.svg"), gulp.parallel(svg, reload));
