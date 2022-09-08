@@ -12,6 +12,7 @@ import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import { deleteAsync } from "del";
 import browser from "browser-sync";
+import { htmlValidator } from "gulp-w3c-html-validator";
 
 // Styles
 
@@ -34,6 +35,13 @@ const html = () => {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 };
+
+export const validator = () => {
+  return gulp
+    .src("build/*.html")
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter());
+}
 
 // Scripts
 
