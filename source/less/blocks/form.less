@@ -8,6 +8,7 @@
 
   @media (min-width: @tablet-width) {
     width: 84%;
+    margin-bottom: 94px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,10 +38,18 @@
 
   &--attractions {
     margin-bottom: 55px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 51px;
+    }
   }
 
   &--summary {
     margin-bottom: 55px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -97,6 +106,10 @@
 
 .form__field--evaluation::before {
   top: -71px;
+
+  @media (min-width: @tablet-width) {
+    top: -34px;
+  }
 }
 
 .form__field--attractions::before {
@@ -107,11 +120,28 @@
   }
 }
 
+.form__field--summary::before {
+  @media (min-width: @tablet-width) {
+    top: -41px;
+  }
+}
+
 .form__title {
   margin-bottom: 20px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 27px;
+  }
+
   &--evaluation {
     margin-bottom: 19px;
+  }
+
+  &--attractions {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -120,7 +150,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -149,6 +179,13 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  &--telephone,
+  &--email {
+    @media (min-width: @tablet-width) {
+      left: 36px;
+    }
+  }
 }
 
 .form__label--pic::after {
@@ -159,6 +196,11 @@
   top: 51%;
   left: 87%;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 42px;
+    left: 241px;
+  }
 }
 
 .form__label--telephone::after {
@@ -180,6 +222,11 @@
   text-transform: initial;
   padding-left: 59px;
   padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 62px;
+    padding-top: 19px;
+  }
 }
 
 .form__input {
@@ -193,32 +240,64 @@
   padding: 16px;
   padding-left: 13px;
   box-sizing: border-box;
-}
-
-.form__input:hover {
-  background: #e5e5e5;
-}
-
-.form__input:active {
-  background: @basic-color;
-  outline: 4px solid #e5e5e5;
-}
-
-.form__input--detailed {
-  padding: 17px 16px 82px 13px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 118px;
+    width: 280px;
+  }
+
+  &--detailed {
+    padding: 17px 16px 82px 13px;
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      position: relative;
+      left: -3px;
+      padding-bottom: 91px;
+    }
+  }
+
+  &--colored {
+    background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
+  }
+
+  &--colored:active {
+    background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
+  }
+
+  &--:hover {
+    background: #e5e5e5;
+  }
+
+  &--:active {
+    background: @basic-color;
+    outline: 4px solid #e5e5e5;
   }
 }
 
-.form__input--colored {
-  background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
-}
+// &--:hover {
+//   background: #e5e5e5;
+// }
 
-.form__input--colored:active {
-  background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
-}
+// &--:active {
+//   background: @basic-color;
+//   outline: 4px solid #e5e5e5;
+// }
+
+// &--detailed {
+//   padding: 17px 16px 82px 13px;
+
+//   @media (min-width: @tablet-width) {
+//     padding-bottom: 118px;
+//   }
+// }
+
+// &--colored {
+//   background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
+// }
+
+// &--colored:active {
+//   background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
+// }
 
 .form__list {
   display: flex;
@@ -239,6 +318,20 @@
     flex-direction: row;
     padding: 0;
   }
+
+  &--evaluation {
+    @media (min-width: @tablet-width) {
+      width: 90%;
+      gap: 17px 16px;
+    }
+  }
+
+  &--attractions {
+    @media (min-width: @tablet-width) {
+      width: 75%;
+      gap: 18px 27px;
+    }
+  }
 }
 
 .form__wrapper-button {
@@ -257,7 +350,8 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    right: 1px;
+    width: 323px;
     margin: 0;
   }
 }
@@ -273,10 +367,15 @@
   margin-left: 51%;
 
   @media (min-width: @tablet-width) {
+    font-size: 14px;
     display: block;
     margin: 0;
     padding: 25px 0 25px 132px;
   }
+}
+
+.form__control {
+  position: relative;
 }
 
 .form__control-mark {
@@ -287,6 +386,11 @@
   border-radius: 50%;
   background-color: #f2f2f2;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 2px;
+  }
 }
 
 .form__input[type="radio"]:checked + .form__control-mark {

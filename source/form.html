@@ -129,7 +129,7 @@
                 <label
                   class="form__label form__label--pic form__label--telephone"
                 >
-                  <span class="form__label-detailed">Контактный телефон*:</span>
+                  <span class="form__label-detailed form__label-detailed--contacts">Контактный телефон*:</span>
 
                   <input
                     class="form__input form__input--colored"
@@ -141,7 +141,7 @@
                   />
                 </label>
                 <label class="form__label form__label--pic form__label--email">
-                  <span class="form__label-detailed">Электронная почта*:</span>
+                  <span class="form__label-detailed form__label-detailed--contacts">Электронная почта*:</span>
 
                   <input
                     class="form__input form__input--colored"
@@ -158,7 +158,7 @@
               <legend class="form__title form__title--evaluation title title--basic">
                 Ваше общее впечатление:
               </legend>
-              <ul class="form__list">
+              <ul class="form__list form__list--evaluation">
                 <li class="form__item">
                   <label class="form__control">
                     <input
@@ -168,7 +168,7 @@
                       value="positive"
                       checked
                     />
-                    <span class="form__control-mark"></span>
+                    <span class="form__control-mark form__control-mark--first"></span>
                     <span class="form__label form__label--control"
                       >Скорее положительное</span
                     >
@@ -182,7 +182,7 @@
                       name="evaluation"
                       value="negative"
                     />
-                    <span class="form__control-mark"></span>
+                    <span class="form__control-mark form__control-mark--second"></span>
                     <span class="form__label form__label--control"
                       >Скорее отрицательное</span
                     >
@@ -196,7 +196,7 @@
                       name="evaluation"
                       value="unknown"
                     />
-                    <span class="form__control-mark"></span>
+                    <span class="form__control-mark form__control-mark--third"></span>
                     <span class="form__label form__label--control"
                       >Затрудняюсь ответить</span
                     >
@@ -205,10 +205,10 @@
               </ul>
             </fieldset>
             <fieldset class="form__field form__field--attractions">
-              <legend class="form__title title title--basic">
+              <legend class="form__title form__title--attractions title title--basic">
                 Посещенные<br />достопримечательности:
               </legend>
-              <ul class="form__list">
+              <ul class="form__list form__list--attractions">
                 <li class="form__item">
                   <label class="form__control">
                     <input
