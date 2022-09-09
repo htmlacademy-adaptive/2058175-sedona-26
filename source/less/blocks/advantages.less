@@ -16,7 +16,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
-    margin-top: 50px;
+    margin-top: 48px;
     margin-bottom: 30px;
     padding: 0 153px;
   }
@@ -178,7 +178,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 51px;
   }
 }
 
@@ -265,7 +265,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -14px;
+    margin-top: -12px;
     padding: 0 83px;
   }
 
@@ -276,10 +276,12 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 31px;
+      padding-left: 18px;
+      padding-right: 17px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: -5px;
+      margin-top: -7px;
       padding: 0 93px;
     }
   }
@@ -289,8 +291,8 @@
 
     @media (min-width: @tablet-width) {
       max-width: 150px;
-      margin-left: auto;
-      margin-right: auto;
+      padding-left: 21px;
+      margin-top: 33px;
     }
 
     @media (min-width: @desktop-width) {
@@ -343,8 +345,35 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     padding: 0 15px;
+    margin-bottom: 0;
+  }
+
+  &--second {
+    @media (max-width: @tablet-width) {
+      br {
+        display: none;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      br {
+        display: block;
+      }
+    }
+  }
+
+  &--fourth {
+    @media (min-width: @desktop-width) {
+      padding: 0 21px;
+    }
   }
 }
 
@@ -366,7 +395,17 @@
   &--gift {
     margin-top: 11px;
     margin-bottom: 15px;
+
+    br {
+        display: none;
+    }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: block;
+    }
   }
+}
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -378,6 +417,7 @@
     margin-top: 128px;
   }
 }
+
 
 .advantages__city-advantages-item-description {
   font-size: 14px;
