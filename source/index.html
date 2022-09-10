@@ -14,6 +14,8 @@
     />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" href="/css/style.min.css" as="style"/>
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font"/>
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -88,12 +90,35 @@
                     Настоящий городок
                   </h3>
                   <p
-                    class="advantages__advantages-item-description description description--additional"
+                    class="advantages__advantages-item-description advantages__advantages-item-description--width description description--additional"
                   >
-                    Седона — не аттракцион для туристов, там течёт своя жизнь
+                    Седона не аттракцион для туристов, там течёт своя жизнь
                   </p>
                 </div>
                 <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="
+                      img/advantages/photo-city-advantage-desk.webp    1x,
+                      img/advantages/photo-city-advantage-desk@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/advantages/photo-city-advantage-tab.webp    1x,
+                      img/advantages/photo-city-advantage-tab@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/advantages/photo-city-advantage.webp    1x,
+                      img/advantages/photo-city-advantage@2x.webp 2x
+                    "
+                  />
                   <source
                     media="(min-width: 1200px)"
                     srcset="
@@ -152,7 +177,8 @@
                   <p
                     class="advantages__city-advantages-item-description advantages__city-advantages-item-description--gift"
                   >
-                    Не только китайского, но и местного производства!
+                    Не только китайского, <br>
+                    но и местного производства!
                   </p>
                 </li>
               </ul>
@@ -161,6 +187,29 @@
               class="advantages__item advantages__item--primary advantages__wrapper"
             >
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/advantages/photo-bridge-advantage-desk.webp    1x,
+                    img/advantages/photo-bridge-advantage-desk@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/advantages/photo-bridge-advantage-tab.webp    1x,
+                    img/advantages/photo-bridge-advantage-tab@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/advantages/photo-bridge-advantage.webp    1x,
+                    img/advantages/photo-bridge-advantage@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -191,9 +240,9 @@
                   Там есть мост дьявола
                 </h3>
                 <p
-                  class="advantages__advantages-item-description description description--additional"
+                  class="advantages__advantages-item-description advantages__advantages-item-description--second description description--additional"
                 >
-                  Да, по нему можно пройти! Если вы осмелитесь, конечно
+                  Да, по нему можно пройти! <br /> Если вы осмелитесь, конечно
                 </p>
               </div>
             </li>
@@ -218,7 +267,7 @@
                 Красивая дорога
               </h3>
               <p
-                class="advantages__advantages-item-description advantages__advantages-item-description--additional description description--basic"
+                class="advantages__advantages-item-description advantages__advantages-item-description--fourth advantages__advantages-item-description--additional description description--basic"
               >
                 Ехать в Седону из Лас-Вегаса совсем не скучно!
               </p>
@@ -233,7 +282,7 @@
               <p
                 class="advantages__advantages-item-description description description--basic"
               >
-                Большинство едет в Гранд Каньон<br />и толпится там
+                Большинство едет в Гранд Каньон <br />&nbsp и толпится там
               </p>
             </li>
           </ol>
@@ -241,8 +290,8 @@
         <section class="search-hotels">
           <h2 class="search-hotels__title">Заинтересовались?</h2>
           <p class="search-hotels__description description description--basic">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие
-            предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки,<br />
+            и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
           <a class="search-hotels__button button" href="#">Найти гостиницу</a>
         </section>
@@ -299,23 +348,26 @@
               class="footer__social-icon"
               href="https://www.youtube.com/user/htmlacademyru"
             >
-            <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Ютуб."
-          >
-            <use href="./img/sprite.svg#youtube"></use>
-          </svg>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Ютуб."
+              >
+                <use href="./img/sprite.svg#youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <section class="footer__copyright copyright">
           <h2 class="visually-hidden">Копирайт.</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/study">
+          <a
+            class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
             <span class="copyright__text">Разработано</span>
             <svg
               class="copyright__logo"

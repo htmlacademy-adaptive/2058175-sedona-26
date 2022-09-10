@@ -14,6 +14,8 @@
     />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" href="/css/style.min.css" as="style"/>
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font"/>
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -81,23 +83,40 @@
         <section class="gallery">
           <ul class="gallery__list">
             <li class="gallery__item">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/catalog/photo-open-space-desk.jpg    1x,
-                    img/catalog/photo-open-space-desk@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery__photo"
-                  src="img/catalog/photo-open-space.jpg"
-                  srcset="img/catalog/photo-open-space@2x.jpg 2x"
-                  alt="Фото дороги."
-                  width="280"
-                  height="280"
-                />
-              </picture>
+              <a class="gallery__photo-link" href="#">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-open-space-desk.webp    1x,
+                      img/catalog/photo-open-space-desk@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/catalog/photo-open-space.webp    1x,
+                      img/catalog/photo-open-space@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-open-space-desk.jpg    1x,
+                      img/catalog/photo-open-space-desk@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery__photo"
+                    src="img/catalog/photo-open-space.jpg"
+                    srcset="img/catalog/photo-open-space@2x.jpg 2x"
+                    alt="Фото дороги."
+                    width="280"
+                    height="280"
+                  />
+                </picture>
+              </a>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Неродные просторы</h3>
@@ -114,30 +133,47 @@
                     role="img"
                     aria-label="Поставить лайк."
                   >
-                  <use href="./img/sprite.svg#like"></use>
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                   <span class="gallery__likes">1350</span>
                 </button>
               </div>
             </li>
             <li class="gallery__item">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/catalog/photo-greenery-desk.jpg    1x,
-                    img/catalog/photo-greenery-desk@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery__photo"
-                  src="img/catalog/photo-greenery.jpg"
-                  srcset="img/catalog/photo-greenery@2x.jpg"
-                  alt="Фото растения."
-                  width="280"
-                  height="280"
-                />
-              </picture>
+              <a class="gallery__photo-link" href="#">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-greenery-desk.webp    1x,
+                      img/catalog/photo-greenery-desk@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/catalog/photo-greenery.webp    1x,
+                      img/catalog/photo-greenery@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-greenery-desk.jpg    1x,
+                      img/catalog/photo-greenery-desk@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery__photo"
+                    src="img/catalog/photo-greenery.jpg"
+                    srcset="img/catalog/photo-greenery@2x.jpg"
+                    alt="Фото растения."
+                    width="280"
+                    height="280"
+                  />
+                </picture>
+              </a>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Местная растительность</h3>
@@ -154,30 +190,47 @@
                     role="img"
                     aria-label="Поставить лайк."
                   >
-                  <use href="./img/sprite.svg#like"></use>
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                   <span class="gallery__likes">143</span>
                 </button>
               </div>
             </li>
             <li class="gallery__item">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/catalog/photo-road-desk.jpg    1x,
-                    img/catalog/photo-road-desk@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery__photo"
-                  src="img/catalog/photo-road.jpg"
-                  srcset="img/catalog/photo-road@2x.jpg"
-                  alt="Вид на дорогу сверху."
-                  width="280"
-                  height="280"
-                />
-              </picture>
+              <a class="gallery__photo-link" href="#">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-road-desk.webp    1x,
+                      img/catalog/photo-road-desk@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/catalog/photo-road.webp    1x,
+                      img/catalog/photo-road@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-road-desk.jpg    1x,
+                      img/catalog/photo-road-desk@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery__photo"
+                    src="img/catalog/photo-road.jpg"
+                    srcset="img/catalog/photo-road@2x.jpg"
+                    alt="Вид на дорогу сверху."
+                    width="280"
+                    height="280"
+                  />
+                </picture>
+              </a>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Дорога на север</h3>
@@ -194,30 +247,47 @@
                     role="img"
                     aria-label="Поставить лайк."
                   >
-                  <use href="./img/sprite.svg#like"></use>
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                   <span class="gallery__likes">96</span>
                 </button>
               </div>
             </li>
             <li class="gallery__item">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/catalog/photo-bridge-desk.jpg    1x,
-                    img/catalog/photo-bridge-desk@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery__photo"
-                  src="img/catalog/photo-bridge.jpg"
-                  srcset="img/catalog/photo-bridge@2x.jpg"
-                  alt="Вид на мост дьявола."
-                  width="280"
-                  height="280"
-                />
-              </picture>
+              <a class="gallery__photo-link" href="#">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-bridge-desk.webp    1x,
+                      img/catalog/photo-bridge-desk@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/catalog/photo-bridge.webp    1x,
+                      img/catalog/photo-bridge@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/catalog/photo-bridge-desk.jpg    1x,
+                      img/catalog/photo-bridge-desk@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery__photo"
+                    src="img/catalog/photo-bridge.jpg"
+                    srcset="img/catalog/photo-bridge@2x.jpg"
+                    alt="Вид на мост дьявола."
+                    width="280"
+                    height="280"
+                  />
+                </picture>
+              </a>
               <div class="gallery__main-wrapper">
                 <div class="gallery__wrapper-text">
                   <h3 class="gallery__title">Мост дьявола</h3>
@@ -234,7 +304,7 @@
                     role="img"
                     aria-label="Поставить лайк."
                   >
-                  <use href="./img/sprite.svg#like"></use>
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                   <span class="gallery__likes">254</span>
                 </button>
@@ -253,6 +323,18 @@
           <div class="video-content__video-wrapper">
             <a class="video-content__link" href="#">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/video/video-desk.webp    1x,
+                    img/video/video-desk@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/video/video.webp 1x, img/video/video@2x.webp 2x"
+                />
                 <source
                   media="(min-width: 768px)"
                   srcset="
@@ -342,7 +424,10 @@
         </ul>
         <section class="footer__copyright copyright">
           <h2 class="visually-hidden">Копирайт.</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/study">
+          <a
+            class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
             <span class="copyright__text">Разработано</span>
             <svg
               class="copyright__logo"
@@ -361,5 +446,6 @@
       </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/likes.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@ import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import { deleteAsync } from "del";
 import browser from "browser-sync";
+import { htmlValidator } from "gulp-w3c-html-validator";
 
 // Styles
 
@@ -35,10 +36,20 @@ const html = () => {
     .pipe(gulp.dest("build"));
 };
 
+export const validator = () => {
+  return gulp
+    .src("build/*.html")
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter());
+}
+
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js"));
+  return gulp
+  .src("source/js/*.js")
+  .pipe(terser())
+  .pipe(gulp.dest("build/js"));
 };
 
 // Images
@@ -133,8 +144,12 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
+  gulp.watch(("source/img/**/*.svg", "!source/img/icons/*.svg"), gulp.parallel(svg, reload));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.series(optimizeImages, reload));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.parallel(createWebp, reload));
 };
 
 // Build

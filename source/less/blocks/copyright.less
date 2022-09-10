@@ -1,7 +1,17 @@
+.copyright {
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    position: relative;
+    left: 5px;
+  }
+}
+
 .copyright__link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -13,7 +23,9 @@
   text-transform: uppercase;
 }
 
-.copyright__link svg {
+.copyright__logo {
+  position: relative;
+  right: 4px;
   fill: @contrasting-color;
 }
 

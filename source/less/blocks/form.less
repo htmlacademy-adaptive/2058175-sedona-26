@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 52px;
+  margin-bottom: 54px;
 
   @media (min-width: @tablet-width) {
     width: 84%;
+    margin-bottom: 94px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,13 +23,47 @@
   flex-direction: column;
   gap: 16px;
   border: none;
-  margin-bottom: 64px;
+  margin-bottom: 58px;
   padding: 0;
   box-sizing: border-box;
 
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-bottom: 64px;
+  }
+
+  &--name {
+    margin-bottom: 65px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--evaluation {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 83px;
+    }
+  }
+
+  &--attractions {
+    margin-bottom: 55px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 51px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 97px;
+    }
+  }
+
+  &--summary {
+    margin-bottom: 55px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -68,7 +103,7 @@
 }
 
 .form__field--name::before {
-  top: -75px;
+  top: -71px;
 
   @media (min-width: @tablet-width) {
     content: none;
@@ -76,21 +111,82 @@
 }
 
 .form__field--contacts::before {
+  top: -73px;
+
   @media (min-width: @tablet-width) {
     content: none;
   }
 }
 
+.form__field--evaluation::before {
+  top: -71px;
+
+  @media (min-width: @tablet-width) {
+    top: -34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -51px;
+  }
+}
+
 .form__field--attractions::before {
-  top: -40%;
+  top: -97px;
 
   @media (min-width: @tablet-width) {
     top: -45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -78px;
+  }
+}
+
+.form__field--summary::before {
+  @media (min-width: @tablet-width) {
+    top: -41px;
   }
 }
 
 .form__title {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 27px;
+  }
+
+  &--name {
+    @media (min-width: @desktop-width) {
+      position: relative;
+      right: -29px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      position: relative;
+      right: 14px;
+    }
+  }
+
+  &--evaluation {
+    margin-bottom: 19px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &--attractions {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 51px;
+    }
+  }
 }
 
 .form__wrapper {
@@ -98,11 +194,11 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 14px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 128px;
+    gap: 86px;
   }
 }
 
@@ -114,6 +210,10 @@
     height: 338px;
     background-color: #dbdbdb;
     left: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 494px;
   }
 }
 
@@ -127,6 +227,13 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  &--telephone,
+  &--email {
+    @media (min-width: @tablet-width) {
+      left: 36px;
+    }
+  }
 }
 
 .form__label--pic::after {
@@ -134,10 +241,18 @@
   content: "";
   width: 18px;
   height: 18px;
-  top: 50%;
-  transform: translateX(-50%);
-  left: 90%;
+  top: 51%;
+  left: 87%;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 42px;
+    left: 241px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 364px;
+  }
 }
 
 .form__label--telephone::after {
@@ -149,16 +264,29 @@
 }
 
 .form__label-detailed {
-  padding-left: 16px;
+  padding-left: 13px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 16px;
+  }
 }
 
 .form__label--control {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: capitalize;
-  padding-left: 62px;
-  padding-top: 11px;
+  text-transform: initial;
+  padding-left: 59px;
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 62px;
+    padding-top: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 65px;
+  }
 }
 
 .form__input {
@@ -169,40 +297,87 @@
   line-height: 26px;
   background-color: #f2f2f2;
   border: none;
-  padding: 5%;
-  box-sizing: border-box;
-}
-
-.form__input:hover {
-  background: #e5e5e5;
-}
-
-.form__input:active {
-  background: @basic-color;
-  outline: 4px solid #e5e5e5;
-}
-
-.form__input--detailed {
   padding: 16px;
-  padding-bottom: 82px;
+  padding-left: 13px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 118px;
+    width: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+    padding-left: 16px;
+  }
+
+  &--detailed {
+    padding: 17px 16px 82px 13px;
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      position: relative;
+      left: -3px;
+      padding-bottom: 91px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 768px;
+      left: 98px;
+    }
+  }
+
+  &--colored {
+    background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
+
+    @media (min-width: @desktop-width) {
+      background: linear-gradient(to right, #f2f2f2 86%, #e6e6e6 86%);
+      width: 402px;
+    }
+  }
+
+  &--colored:active {
+    background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
+  }
+
+  &--:hover {
+    background: #e5e5e5;
+  }
+
+  &--:active {
+    background: @basic-color;
+    outline: 4px solid #e5e5e5;
   }
 }
 
-.form__input--colored {
-  background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
-}
+// &--:hover {
+//   background: #e5e5e5;
+// }
 
-.form__input--colored:active {
-  background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
-}
+// &--:active {
+//   background: @basic-color;
+//   outline: 4px solid #e5e5e5;
+// }
+
+// &--detailed {
+//   padding: 17px 16px 82px 13px;
+
+//   @media (min-width: @tablet-width) {
+//     padding-bottom: 118px;
+//   }
+// }
+
+// &--colored {
+//   background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
+// }
+
+// &--colored:active {
+//   background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
+// }
 
 .form__list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 27px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -218,11 +393,31 @@
     flex-direction: row;
     padding: 0;
   }
-}
 
-.form__control {
-  display: flex;
-  position: relative;
+  &--evaluation {
+    @media (min-width: @tablet-width) {
+      width: 90%;
+      gap: 17px 16px;
+    }
+    @media (min-width: @desktop-width) {
+      width: auto;
+      gap: 62px;
+    }
+  }
+
+  &--attractions {
+    @media (min-width: @tablet-width) {
+      width: 75%;
+      gap: 18px 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+      gap: 60px;
+      padding-left: 43px;
+      padding-right: 43px;
+    }
+  }
 }
 
 .form__wrapper-button {
@@ -231,20 +426,34 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 100px;
+  }
 }
 
 .form__button {
+  position: relative;
+  right: 2px;
   width: 281px;
-  padding: 18px 33px 13px 33px;
+  padding: 18px 34px 14px 29px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    right: 1px;
+    width: 323px;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 2px;
+    width: 383px;
   }
 }
 
 .form__note {
+  position: relative;
+  top: 3px;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
@@ -253,19 +462,34 @@
   margin-left: 51%;
 
   @media (min-width: @tablet-width) {
+    font-size: 14px;
     display: block;
     margin: 0;
     padding: 25px 0 25px 132px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 93px 25px 0;
+  }
+}
+
+.form__control {
+  position: relative;
 }
 
 .form__control-mark {
   position: absolute;
+  left: -2px;
   width: 46px;
   height: 46px;
   border-radius: 50%;
   background-color: #f2f2f2;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 2px;
+  }
 }
 
 .form__input[type="radio"]:checked + .form__control-mark {
@@ -303,6 +527,8 @@
   border: 15px solid #d5d5d5;
 }
 
-.form__control:active .form__input[type="checkbox"]:checked + .form__control-mark {
+.form__control:active
+  .form__input[type="checkbox"]:checked
+  + .form__control-mark {
   background-image: url("../img/checked-opacity.svg");
 }
