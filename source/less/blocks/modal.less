@@ -11,53 +11,130 @@
 
 .modal__item {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
   width: 320px;
   height: fit-content;
   background-color: @basic-color;
   margin: auto;
   box-sizing: border-box;
+  padding: 45px 42px 35px 42px;
 
   @media (min-width: @tablet-width) {
     width: 400px;
+    height: 347px;
   }
-}
 
-.modal__item--error {
-  padding: 45px 42px 35px 42px;
-}
+  &--error {
+    display: none;
+    padding: 45px 42px 35px 42px;
 
-.modal__item--success {
-  @media (min-width: @tablet-width) {
-    width: 640px;
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
   }
-}
 
-.modal__wrapper-text {
-  padding: 39px 39px 0 39px;
+  &--success {
+    display: none;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 640px;
+    }
+  }
 }
 
 .modal__title {
-  margin: 0;
-}
+  margin: 0 auto;
+  margin-bottom: 26px;
 
-.modal__title--success {
-  margin-bottom: 30px;
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+
+    br {
+      display: block;
+    }
+  }
+
+  &--error {
+    @media (min-width: @tablet-width) {
+      padding: 53px 76px 0;
+      line-height: 34px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--success {
+    padding: 55px;
+    padding-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 52px 55px 0;
+    }
+  }
 }
 
 .modal__description {
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  &--error {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
+      padding: 0 55px;
+    }
+  }
+
+  &--success {
+    margin-bottom: 50px;
+    padding: 45px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 50px;
+      padding: 0 45px;
+    }
+  }
 }
 
 .modal__wrapper-button {
   background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 47px;
+    padding-bottom: 44px;
+  }
 }
 
 .modal__button {
   display: block;
+  font-size: 18px;
   margin: 0 auto;
   padding: 18px 64px;
   padding-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  &--error {
+    width: 180px;
+
+    @media (min-width: @tablet-width) {
+      width: 272px;
+    }
+  }
+
+  &--success {
+    width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 458px;
+    }
+  }
 }

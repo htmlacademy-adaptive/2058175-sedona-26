@@ -152,6 +152,7 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    margin: 0 auto;
     font-size: 21px;
     margin-bottom: 27px;
   }
@@ -339,6 +340,10 @@
     background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
   }
 
+  &--colored:not(:placeholder-shown):invalid {
+    outline: 4px solid #ff0000;
+  }
+
   &--:hover {
     background: #e5e5e5;
   }
@@ -349,30 +354,11 @@
   }
 }
 
-// &--:hover {
-//   background: #e5e5e5;
-// }
-
-// &--:active {
-//   background: @basic-color;
-//   outline: 4px solid #e5e5e5;
-// }
-
-// &--detailed {
-//   padding: 17px 16px 82px 13px;
-
-//   @media (min-width: @tablet-width) {
-//     padding-bottom: 118px;
-//   }
-// }
-
-// &--colored {
-//   background: linear-gradient(to right, #f2f2f2 80%, #e6e6e6 80%);
-// }
-
-// &--colored:active {
-//   background: linear-gradient(to right, @basic-color 80%, #e6e6e6 80%);
-// }
+.form__input:disabled {
+  background-color: #d3d3d3;
+  color: @basic-color;
+  outline: 4px solid @contrasting-color;
+}
 
 .form__list {
   display: flex;
@@ -399,6 +385,7 @@
       width: 90%;
       gap: 17px 16px;
     }
+
     @media (min-width: @desktop-width) {
       width: auto;
       gap: 62px;
@@ -527,8 +514,6 @@
   border: 15px solid #d5d5d5;
 }
 
-.form__control:active
-  .form__input[type="checkbox"]:checked
-  + .form__control-mark {
+.form__control:active .form__input[type="checkbox"]:checked + .form__control-mark {
   background-image: url("../img/checked-opacity.svg");
 }
