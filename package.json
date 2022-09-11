@@ -25,8 +25,9 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "lint": "npm run editorconfig && npm run stylelint",
+    "lint:html": "gulp validator",
+    "lint:styles": "stylelint \"source/less/**/*.less\" --syntax less",
+    "lint": "npm run editorconfig && npm run lint:styles",
     "build": "gulp build",
     "start": "gulp"
   },

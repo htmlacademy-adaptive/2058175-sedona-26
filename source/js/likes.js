@@ -1,11 +1,11 @@
-const likeButtons = Array.from(document.querySelectorAll(".gallery__button-like"));
-const likeNumber = Array.from(document.querySelectorAll(".gallery__likes"));
+const likeButtons = document.querySelectorAll(".gallery__button-like");
 
-likeButtons.forEach((button, index) => {
+likeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     button.classList.toggle("gallery__button-like--added");
-    const current = Number(likeNumber[index].innerHTML);
+    const currentElementNumber = button.querySelector(".gallery__likes");
+    const current = Number(currentElementNumber.innerText);
     const inc = button.classList.contains("gallery__button-like--added") ? 1 : -1;
-    likeNumber[index].innerHTML = current + inc;
+    currentElementNumber.innerText = current + inc;
   });
 });

@@ -6,6 +6,7 @@
 .advantages__title {
   position: relative;
   z-index: 2;
+  margin: auto;
   margin-top: 32px;
   margin-bottom: 35px;
   padding: 0 30px;
@@ -332,7 +333,7 @@
 }
 
 .advantages__advantages-item-description {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 29px;
 
   &--additional {
@@ -395,13 +396,7 @@
   &--gift {
     margin-top: 11px;
     margin-bottom: 15px;
-
-  @media (min-width: @desktop-width) {
-    br {
-      display: block;
-    }
   }
-}
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -413,7 +408,6 @@
     margin-top: 128px;
   }
 }
-
 
 .advantages__city-advantages-item-description {
   font-size: 14px;
@@ -428,8 +422,20 @@
     }
   }
 
+  &--gift {
+    br {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      br {
+        display: block;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    max-width: 194px;
+    max-width: 193px;
   }
 
   @media (min-width: @desktop-width) {
