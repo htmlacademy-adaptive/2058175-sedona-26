@@ -1,0 +1,1 @@
+const likeButtons=document.querySelectorAll(".gallery__button-like");likeButtons.forEach((e=>{e.addEventListener("click",(()=>{e.classList.toggle("gallery__button-like--added");const t=e.querySelector(".gallery__likes"),l=Number(t.innerText),n=e.classList.contains("gallery__button-like--added")?1:-1;t.innerText=l+n}))}));
